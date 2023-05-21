@@ -1,0 +1,23 @@
+{
+    "name": "Grocy Bring Sync",
+    "description": "This Addon syncs the missing items from Grocy to Bring",
+    "version": "1.0.4",
+    "slug": "grocy_bring_sync",
+    "init": false,
+    "arch": ["amd64", "armv7"],
+    "ports": {
+        "6060/tcp": 6060
+      },
+    "options": {
+      },
+      "schema": {
+        "bringEmail": "str",
+        "bringPassword": "password",
+        "bringList": "str",
+        "grocyBaseUrl": "str",
+        "grocyApiKey": "password",
+        "uptimeKumePingUrl": "str?",
+        "serviceTokenId": "str",
+        "serviceTokenSecret": "password"
+      }
+}
