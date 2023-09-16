@@ -74,9 +74,10 @@ const synced = (req, res, next) => __awaiter(void 0, void 0, void 0, function* (
             headers: {},
         };
         if (options_json_1.default.serviceTokenId && options_json_1.default.serviceTokenSecret) {
+            //@ts-ignore
             uptimeKumaConfig.headers["CF-Access-Client-Id"] = options_json_1.default.serviceTokenId;
-            uptimeKumaConfig.headers["CF-Access-Client-Secret"] =
-                options_json_1.default.serviceTokenSecret;
+            //@ts-ignore
+            uptimeKumaConfig.headers["CF-Access-Client-Secret"] = options_json_1.default.serviceTokenSecret;
         }
         fetch(options_json_1.default.uptimeKumePingUrl, uptimeKumaConfig);
         log("Send notification to Uptime Kuma");
@@ -103,7 +104,9 @@ function getMissingProducts() {
             },
         };
         if (options_json_1.default.serviceTokenId && options_json_1.default.serviceTokenSecret) {
+            //@ts-ignore
             GrocyConfig.headers["CF-Access-Client-Id"] = options_json_1.default.serviceTokenId;
+            //@ts-ignore
             GrocyConfig.headers["CF-Access-Client-Secret"] = options_json_1.default.serviceTokenSecret;
         }
         const response = yield fetch(options_json_1.default.grocyBaseUrl + "/stock/volatile", GrocyConfig);
